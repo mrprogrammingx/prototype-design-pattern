@@ -10,5 +10,5 @@ abstract class Shape
         $this->y = $y;
         $this->color = $color;
     }
-    
+    abstract public function clone(): self;
 }
