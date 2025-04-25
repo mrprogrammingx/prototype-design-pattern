@@ -10,5 +10,6 @@ class Circle
 
     public function clone(): self
     {
+        return new Circle($this->radius);
     }
 }
