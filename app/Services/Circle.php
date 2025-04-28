@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-class Circle
+class Circle extends Shape
 {
     public function __construct(public int $radius)
     {
