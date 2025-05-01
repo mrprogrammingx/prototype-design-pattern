@@ -17,5 +17,9 @@ class Application
         $this->circle->y = 10;
 
         $this->shapes[] = $this->circle;
+
+        $anotherCircle = $this->circle->clone();
+        $this->shapes[] = $anotherCircle;
+        
     }
 }
