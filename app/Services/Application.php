@@ -20,6 +20,8 @@ class Application
 
         $anotherCircle = $this->circle->clone();
         $this->shapes[] = $anotherCircle;
-        
+
+        $rectangle = new Rectangle(10, 20);
+
     }
 }
