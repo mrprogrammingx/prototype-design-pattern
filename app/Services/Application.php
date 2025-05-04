@@ -24,4 +24,9 @@ class Application
         $rectangle = new Rectangle(10, 20);
         $this->shapes[] = $rectangle;
     }
+
+    public function businessLogic()
+    {
+        $shapesCopy = [];
+    }
 }
