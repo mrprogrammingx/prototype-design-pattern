@@ -28,5 +28,11 @@ class Application
     public function businessLogic()
     {
         $shapesCopy = [];
+
+        foreach ($this->shapes as $shape) {
+            $shapesCopy[] = $shape->clone();
+        }
+
+        return $shapesCopy;
     }
 }
