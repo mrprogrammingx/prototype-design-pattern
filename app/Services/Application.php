@@ -12,6 +12,7 @@ class Application
 
     public function __construct()
     {
+        $defaultRadius = 20;
         $this->circle = new Circle(20);
         $this->circle->x = 10;
         $this->circle->y = 10;
