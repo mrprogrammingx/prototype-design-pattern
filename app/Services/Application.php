@@ -13,8 +13,9 @@ class Application
     public function __construct()
     {
         $defaultRadius = 20;
+        $defaultX = 10;
         $this->circle = new Circle($defaultRadius);
-        $this->circle->x = 10;
+        $this->circle->x = $defaultX;
         $this->circle->y = 10;
 
         $this->shapes[] = $this->circle;
