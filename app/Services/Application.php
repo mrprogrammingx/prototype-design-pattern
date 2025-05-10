@@ -14,9 +14,10 @@ class Application
     {
         $defaultRadius = 20;
         $defaultX = 10;
+        $defaultY = 10;
         $this->circle = new Circle($defaultRadius);
         $this->circle->x = $defaultX;
-        $this->circle->y = 10;
+        $this->circle->y = $defaultY;
 
         $this->shapes[] = $this->circle;
 
