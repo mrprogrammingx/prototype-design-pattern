@@ -38,4 +38,10 @@ class Application
 
         return $shapesCopy;
     }
+
+    public function getShapes(): array
+    {
+        return $this->shapes;
+    }
+
 }
