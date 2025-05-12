@@ -44,4 +44,9 @@ class Application
         return $this->shapes;
     }
 
+    public function getCircle(): Circle
+    {
+        return $this->circle;
+    }
+    
 }
