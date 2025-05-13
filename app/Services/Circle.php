@@ -12,4 +12,10 @@ class Circle extends Shape
     {
         return new Circle($this->radius);
     }
+
+    public function getRadius(): int
+    {
+        return $this->radius;
+    }
+    
 }
