@@ -14,4 +14,9 @@ class Rectangle extends Shape
     {
         return new Rectangle($this->width, $this->height);
     }
+
+    public function getWidth(): int
+    {
+        return $this->width;
+    }
 }
