@@ -19,4 +19,10 @@ class Rectangle extends Shape
     {
         return $this->width;
     }
+
+    public function getHeight(): int
+    {
+        return $this->height;
+    }
+    
 }
