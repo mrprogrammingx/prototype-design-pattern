@@ -10,5 +10,11 @@ abstract class Shape
         $this->y = $y;
         $this->color = $color;
     }
+
+    public function getX(): int
+    {
+        return $this->x;
+    }
+    
     abstract public function clone(): self;
 }
