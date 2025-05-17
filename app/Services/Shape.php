@@ -15,6 +15,11 @@ abstract class Shape
     {
         return $this->x;
     }
-    
+
+    public function getY(): int
+    {
+        return $this->y;
+    }
+
     abstract public function clone(): self;
 }
