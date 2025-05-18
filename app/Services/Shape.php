@@ -21,5 +21,10 @@ abstract class Shape
         return $this->y;
     }
 
+    public function getColor(): string
+    {
+        return $this->color;
+    }
+
     abstract public function clone(): self;
 }
