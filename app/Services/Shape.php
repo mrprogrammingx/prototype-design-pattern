@@ -26,5 +26,10 @@ abstract class Shape
         return $this->color;
     }
 
+    public function setX(int $x): void
+    {
+        $this->x = $x;
+    }
+
     abstract public function clone(): self;
 }
