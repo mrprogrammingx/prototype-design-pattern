@@ -31,5 +31,10 @@ abstract class Shape
         $this->x = $x;
     }
 
+    public function setY(int $y): void
+    {
+        $this->y = $y;
+    }
+
     abstract public function clone(): self;
 }
