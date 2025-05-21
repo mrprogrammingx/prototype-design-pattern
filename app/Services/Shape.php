@@ -36,5 +36,10 @@ abstract class Shape
         $this->y = $y;
     }
 
+    public function setColor(string $color): void
+    {
+        $this->color = $color;
+    }
+
     abstract public function clone(): self;
 }
