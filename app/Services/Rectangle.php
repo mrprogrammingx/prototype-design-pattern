@@ -24,5 +24,10 @@ class Rectangle extends Shape
     {
         return $this->height;
     }
-    
+
+    public function setWidth(int $width): void
+    {
+        $this->width = $width;
+    }
+
 }
