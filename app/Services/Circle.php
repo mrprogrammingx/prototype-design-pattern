@@ -17,5 +17,10 @@ class Circle extends Shape
     {
         return $this->radius;
     }
+
+    public function setRadius(int $radius): void
+    {
+        $this->radius = $radius;
+    }
     
 }
