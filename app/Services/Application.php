@@ -49,4 +49,9 @@ class Application
         return $this->circle;
     }
     
+    public function setCircle(Circle $circle): void
+    {
+        $this->circle = $circle;
+    }
+    
 }
