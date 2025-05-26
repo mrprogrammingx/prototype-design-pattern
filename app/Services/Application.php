@@ -53,5 +53,10 @@ class Application
     {
         $this->circle = $circle;
     }
-    
+
+    public function setShapes(array $shapes): void
+    {
+        $this->shapes = $shapes;
+    }
+
 }
