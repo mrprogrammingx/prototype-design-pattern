@@ -59,4 +59,9 @@ class Application
         $this->shapes = $shapes;
     }
 
+    public function addShape(Shape $shape): void
+    {
+        $this->shapes[] = $shape;
+    }
+
 }
