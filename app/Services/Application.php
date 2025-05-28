@@ -64,4 +64,12 @@ class Application
         $this->shapes[] = $shape;
     }
 
+    public function removeShape(Shape $shape): void
+    {
+        $key = array_search($shape, $this->shapes, true);
+        if ($key !== false) {
+            unset($this->shapes[$key]);
+        }
+    }
+    
 }
