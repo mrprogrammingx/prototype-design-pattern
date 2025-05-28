@@ -71,5 +71,10 @@ class Application
             unset($this->shapes[$key]);
         }
     }
+
+    public function clearShapes(): void
+    {
+        $this->shapes = [];
+    }
     
 }
