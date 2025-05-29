@@ -76,5 +76,10 @@ class Application
     {
         $this->shapes = [];
     }
-    
+
+    public function getShapeByIndex(int $index): ?Shape
+    {
+        return $this->shapes[$index] ?? null;
+    }
+
 }
