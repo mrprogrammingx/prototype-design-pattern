@@ -82,4 +82,9 @@ class Application
         return $this->shapes[$index] ?? null;
     }
 
+    public function getShapeCount(): int
+    {
+        return count($this->shapes);
+    }
+    
 }
