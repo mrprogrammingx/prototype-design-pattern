@@ -86,5 +86,14 @@ class Application
     {
         return count($this->shapes);
     }
-    
+
+    public function getShapeByColor(string $color): ?Shape
+    {
+        foreach ($this->shapes as $shape) {
+            if ($shape->getColor() === $color) {
+                return $shape;
+            }
+        }
+        return null;
+    }
 }
