@@ -96,4 +96,15 @@ class Application
         }
         return null;
     }
+
+    public function getShapeByPosition(int $x, int $y): ?Shape
+    {
+        foreach ($this->shapes as $shape) {
+            if ($shape->getX() === $x && $shape->getY() === $y) {
+                return $shape;
+            }
+        }
+        return null;
+    }
+
 }
