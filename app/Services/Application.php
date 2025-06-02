@@ -107,4 +107,15 @@ class Application
         return null;
     }
 
+    public function getShapesByType(string $type): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
+    
 }
