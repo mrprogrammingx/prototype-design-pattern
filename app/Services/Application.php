@@ -128,4 +128,16 @@ class Application
         }
         return $filteredShapes;
     }
+
+    public function getShapesByWidth(int $width): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if ($shape instanceof Rectangle && $shape->getWidth() === $width) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
+    
 }
