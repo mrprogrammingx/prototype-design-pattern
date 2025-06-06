@@ -151,4 +151,15 @@ class Application
         return $filteredShapes;
     }
 
+    public function getShapesByPosition(int $x, int $y): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if ($shape->getX() === $x && $shape->getY() === $y) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
+
 }
