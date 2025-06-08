@@ -161,12 +161,23 @@ class Application
         }
         return $filteredShapes;
     }
-    
+
     public function getShapesByColor(string $color): array
     {
         $filteredShapes = [];
         foreach ($this->shapes as $shape) {
             if ($shape->getColor() === $color) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
+
+    public function getShapesByTypeAndColor(string $type, string $color): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type && $shape->getColor() === $color) {
                 $filteredShapes[] = $shape;
             }
         }
