@@ -184,4 +184,15 @@ class Application
         return $filteredShapes;
     }
 
+    public function getShapesByTypeAndPosition(string $type, int $x, int $y): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type && $shape->getX() === $x && $shape->getY() === $y) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
+    
 }
