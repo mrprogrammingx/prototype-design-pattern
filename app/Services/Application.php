@@ -217,5 +217,14 @@ class Application
         return $filteredShapes;
     }
 
-    
+    public function getShapesByTypeAndHeight(string $type, int $height): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type && $shape instanceof Rectangle && $shape->getHeight() === $height) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
 }
