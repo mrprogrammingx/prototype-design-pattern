@@ -238,4 +238,15 @@ class Application
         }
         return $filteredShapes;
     }
+
+    public function getShapesByTypeAndPositionAndRadius(string $type, int $x, int $y, int $radius): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type && $shape->getX() === $x && $shape->getY() === $y && $shape instanceof Circle && $shape->getRadius() === $radius) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
 }
