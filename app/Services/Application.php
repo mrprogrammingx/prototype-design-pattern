@@ -249,4 +249,15 @@ class Application
         }
         return $filteredShapes;
     }
+
+    public function getShapesByTypeAndPositionAndWidth(string $type, int $x, int $y, int $width): array
+    {
+        $filteredShapes = [];
+        foreach ($this->shapes as $shape) {
+            if (get_class($shape) === $type && $shape->getX() === $x && $shape->getY() === $y && $shape instanceof Rectangle && $shape->getWidth() === $width) {
+                $filteredShapes[] = $shape;
+            }
+        }
+        return $filteredShapes;
+    }
 }
