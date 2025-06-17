@@ -22,5 +22,10 @@ class Circle extends Shape
     {
         $this->radius = $radius;
     }
+
+    public function getArea(): float
+    {
+        return pi() * ($this->radius ** 2);
+    }
     
 }
