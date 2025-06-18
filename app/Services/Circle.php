@@ -27,5 +27,10 @@ class Circle extends Shape
     {
         return pi() * ($this->radius ** 2);
     }
+
+    public function getPerimeter(): float
+    {
+        return 2 * pi() * $this->radius;
+    }
     
 }
