@@ -48,4 +48,15 @@ class Circle extends Shape
         );
     }
 
+    public function __debugInfo(): array
+    {
+        return [
+            'type' => $this->getType(),
+            'radius' => $this->radius,
+            'x' => $this->x,
+            'y' => $this->y,
+            'area' => $this->getArea(),
+            'perimeter' => $this->getPerimeter(),
+        ];
+    }
 }
