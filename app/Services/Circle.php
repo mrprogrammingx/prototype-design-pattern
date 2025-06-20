@@ -33,4 +33,9 @@ class Circle extends Shape
         return 2 * pi() * $this->radius;
     }
     
+    public function getType(): string
+    {
+        return 'Circle';
+    }
+    
 }
