@@ -37,5 +37,15 @@ class Circle extends Shape
     {
         return 'Circle';
     }
-    
+
+    public function __toString(): string
+    {
+        return sprintf(
+            "Circle: radius=%d, x=%d, y=%d",
+            $this->radius,
+            $this->x,
+            $this->y
+        );
+    }
+
 }
