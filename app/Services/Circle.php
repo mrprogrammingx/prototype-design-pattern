@@ -59,4 +59,9 @@ class Circle extends Shape
             'perimeter' => $this->getPerimeter(),
         ];
     }
+
+    public function getColor(): string
+    {
+        return $this->color;
+    }
 }
