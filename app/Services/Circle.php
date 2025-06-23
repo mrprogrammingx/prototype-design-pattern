@@ -64,4 +64,10 @@ class Circle extends Shape
     {
         return $this->color;
     }
+
+    public function setColor(string $color): void
+    {
+        $this->color = $color;
+    }
+    
 }
