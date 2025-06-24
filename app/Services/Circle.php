@@ -69,5 +69,10 @@ class Circle extends Shape
     {
         $this->color = $color;
     }
+
+    public function getX(): int
+    {
+        return $this->x;
+    }
     
 }
