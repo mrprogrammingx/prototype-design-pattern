@@ -80,4 +80,9 @@ class Circle extends Shape
         return $this->y;
     }
 
+    public function setPosition(int $x, int $y): void
+    {
+        $this->x = $x;
+        $this->y = $y;
+    }
 }
