@@ -91,4 +91,13 @@ class Circle extends Shape
         return ['x' => $this->x, 'y' => $this->y];
     }
     
+    public function getBoundingBox(): array
+    {
+        return [
+            'x1' => $this->x - $this->radius,
+            'y1' => $this->y - $this->radius,
+            'x2' => $this->x + $this->radius,
+            'y2' => $this->y + $this->radius,
+        ];
+    }
 }
