@@ -100,4 +100,11 @@ class Circle extends Shape
             'y2' => $this->y + $this->radius,
         ];
     }
+
+    public function isPointInside(int $x, int $y): bool
+    {
+        $dx = $x - $this->x;
+        $dy = $y - $this->y;
+        return ($dx * $dx + $dy * $dy) <= ($this->radius * $this->radius);
+    }
 }
