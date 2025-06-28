@@ -85,4 +85,10 @@ class Circle extends Shape
         $this->x = $x;
         $this->y = $y;
     }
+
+    public function getPosition(): array
+    {
+        return ['x' => $this->x, 'y' => $this->y];
+    }
+    
 }
