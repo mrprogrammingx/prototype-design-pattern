@@ -107,4 +107,11 @@ class Circle extends Shape
         $dy = $y - $this->y;
         return ($dx * $dx + $dy * $dy) <= ($this->radius * $this->radius);
     }
+
+    public function getDistanceTo(int $x, int $y): float
+    {
+        $dx = $x - $this->x;
+        $dy = $y - $this->y;
+        return sqrt($dx * $dx + $dy * $dy);
+    }
 }
