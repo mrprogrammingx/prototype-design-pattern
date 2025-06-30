@@ -114,4 +114,28 @@ class Circle extends Shape
         $dy = $y - $this->y;
         return sqrt($dx * $dx + $dy * $dy);
     }
+
+    public function getIntersectionWith(Circle $other): ?array
+    {
+        $d = $this->getDistanceTo($other->getX(), $other->getY());
+        if ($d > ($this->radius + $other->getRadius()) || $d < abs($this->radius - $other->getRadius())) {
+            return null; // No intersection
+        }
+
+        // Calculate intersection points
+        $a = ($this->radius ** 2 - $other->getRadius() ** 2 + $d ** 2) / (2 * $d);
+        $h = sqrt($this->radius ** 2 - $a ** 2);
+        $x0 = $this->x + ($a * ($other->getX() - $this->x)) / $d;
+        $y0 = $this->y + ($a * ($other->getY() - $this->y)) / $d;
+
+        if ($h == 0) {
+            return [[$x0, $y0]]; // One intersection point
+        }
+
+        return [
+            [$x0 + ($h * ($other->getY() - $this->y)) / $d, $y0 - ($h * ($other->getX() - $this->x)) / $d],
+            [$x0 - ($h * ($other->getY() - $this->y)) / $d, $y0 + ($h * ($other->getX() - $this->x)) / $d],
+        ]; // Two intersection points
+    }
+    
 }
