@@ -138,4 +138,8 @@ class Circle extends Shape
         ]; // Two intersection points
     }
     
+    public function getScaleFactor(): float
+    {
+        return $this->radius / 100.0; // Example scale factor based on radius
+    }
 }
