@@ -142,4 +142,10 @@ class Circle extends Shape
     {
         return $this->radius / 100.0; // Example scale factor based on radius
     }
+
+    public function setScaleFactor(float $scaleFactor): void
+    {
+        $this->radius = (int)($scaleFactor * 100); // Example scaling logic
+    }
+
 }
