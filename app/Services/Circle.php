@@ -152,5 +152,10 @@ class Circle extends Shape
     {
         return $this->getScaleFactor();
     }
+
+    public function setScale(float $scale): void
+    {
+        $this->setScaleFactor($scale);
+    }
     
 }
