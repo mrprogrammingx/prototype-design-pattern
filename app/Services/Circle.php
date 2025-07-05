@@ -157,5 +157,10 @@ class Circle extends Shape
     {
         $this->setScaleFactor($scale);
     }
-    
+
+    public function getRotation(): float
+    {
+        return 0.0; // Circles do not have a rotation
+    }
+
 }
