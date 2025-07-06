@@ -162,5 +162,14 @@ class Circle extends Shape
     {
         return 0.0; // Circles do not have a rotation
     }
+    
+    public function getTransformations(): array
+    {
+        return [
+            'scale' => $this->getScale(),
+            'rotation' => $this->getRotation(),
+            'position' => $this->getPosition(),
+        ];
+    }
 
 }
