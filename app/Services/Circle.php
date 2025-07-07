@@ -162,7 +162,7 @@ class Circle extends Shape
     {
         return 0.0; // Circles do not have a rotation
     }
-    
+
     public function getTransformations(): array
     {
         return [
@@ -172,4 +172,17 @@ class Circle extends Shape
         ];
     }
 
+    public function applyTransformation(array $transformation): void
+    {
+        if (isset($transformation['scale'])) {
+            $this->setScale($transformation['scale']);
+        }
+        if (isset($transformation['rotation'])) {
+            // Rotation is not applicable for circles
+        }
+        if (isset($transformation['position'])) {
+            $this->setPosition($transformation['position']['x'], $transformation['position']['y']);
+        }
+    }
+    
 }
