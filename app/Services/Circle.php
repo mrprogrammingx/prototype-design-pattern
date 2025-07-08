@@ -185,4 +185,12 @@ class Circle extends Shape
         }
     }
     
+    public function getTransformationMatrix(): array
+    {
+        return [
+            'scale' => $this->getScale(),
+            'rotation' => $this->getRotation(),
+            'position' => $this->getPosition(),
+        ];
+    }
 }
