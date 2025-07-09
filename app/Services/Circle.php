@@ -193,4 +193,17 @@ class Circle extends Shape
             'position' => $this->getPosition(),
         ];
     }
+
+    public function applyTransformationMatrix(array $matrix): void
+    {
+        if (isset($matrix['scale'])) {
+            $this->setScale($matrix['scale']);
+        }
+        if (isset($matrix['rotation'])) {
+            // Rotation is not applicable for circles
+        }
+        if (isset($matrix['position'])) {
+            $this->setPosition($matrix['position']['x'], $matrix['position']['y']);
+        }
+    }
 }
