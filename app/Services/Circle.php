@@ -206,4 +206,10 @@ class Circle extends Shape
             $this->setPosition($matrix['position']['x'], $matrix['position']['y']);
         }
     }
+
+    public function getTransformationType(): string
+    {
+        return 'CircleTransformation';
+    }
+    
 }
