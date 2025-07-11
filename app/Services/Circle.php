@@ -211,5 +211,13 @@ class Circle extends Shape
     {
         return 'CircleTransformation';
     }
-    
+
+    public function getTransformationData(): array
+    {
+        return [
+            'scale' => $this->getScale(),
+            'rotation' => $this->getRotation(),
+            'position' => $this->getPosition(),
+        ];
+    }
 }
