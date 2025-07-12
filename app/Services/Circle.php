@@ -220,4 +220,10 @@ class Circle extends Shape
             'position' => $this->getPosition(),
         ];
     }
+    public function applyTransformationToShape(Shape $shape): void
+    {
+        if ($shape instanceof Circle) {
+            $shape->applyTransformation($this->getTransformationData());
+        }
+    }
 }
