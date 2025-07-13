@@ -226,4 +226,12 @@ class Circle extends Shape
             $shape->applyTransformation($this->getTransformationData());
         }
     }
+
+    public function getTransformationForShape(Shape $shape): array
+    {
+        if ($shape instanceof Circle) {
+            return $this->getTransformationData();
+        }
+        return [];
+    }
 }
