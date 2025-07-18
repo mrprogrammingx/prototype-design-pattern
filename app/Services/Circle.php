@@ -264,4 +264,9 @@ class Circle extends Shape
         return $this->getTransformationData();
     }
     
+    public function applyTransformationToCircle(Circle $circle): void
+    {
+        $circle->applyTransformation($this->getTransformationData());
+    }
+    
 }
