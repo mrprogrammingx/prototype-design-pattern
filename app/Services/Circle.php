@@ -276,5 +276,9 @@ class Circle extends Shape
         }
         return [];
     }
-    
+
+    public function getTransformationMatrixForCircle(Circle $circle): array
+    {
+        return $this->getTransformationMatrix();
+    }
 }
