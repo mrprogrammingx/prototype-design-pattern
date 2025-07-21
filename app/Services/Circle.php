@@ -281,4 +281,9 @@ class Circle extends Shape
     {
         return $this->getTransformationMatrix();
     }
+
+    public function applyTransformationMatrixToCircle(Circle $circle): void
+    {
+        $circle->applyTransformationMatrix($this->getTransformationMatrix());  
+    }
 }
