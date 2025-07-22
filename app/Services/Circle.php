@@ -310,4 +310,12 @@ class Circle extends Shape
         }
         return [];
     }
+
+    public function getTransformationMatrixForCircleType(string $type): array
+    {
+        if ($type === 'Circle') {
+            return $this->getTransformationMatrix();
+        }
+        return [];
+    }
 }
