@@ -286,4 +286,12 @@ class Circle extends Shape
     {
         $circle->applyTransformationMatrix($this->getTransformationMatrix());  
     }
+
+    public function getTransformationForCircleShape(Shape $shape): array
+    {
+        if ($shape instanceof Circle) {
+            return $this->getTransformationData();
+        }
+        return [];
+    }
 }
