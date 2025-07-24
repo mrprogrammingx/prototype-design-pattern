@@ -34,4 +34,9 @@ class Rectangle extends Shape
     {
         $this->height = $height;
     }
+
+    public function getArea(): float
+    {
+        return $this->width * $this->height;
+    }
 }
