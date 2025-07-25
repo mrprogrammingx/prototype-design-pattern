@@ -49,4 +49,15 @@ class Rectangle extends Shape
     {
         return 'Rectangle';
     }
+
+    public function __toString(): string
+    {
+        return sprintf(
+            "Rectangle: width=%d, height=%d, x=%d, y=%d",
+            $this->width,
+            $this->height,
+            $this->x,
+            $this->y
+        );
+    }
 }
