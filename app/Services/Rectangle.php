@@ -39,4 +39,9 @@ class Rectangle extends Shape
     {
         return $this->width * $this->height;
     }
+
+    public function getPerimeter(): float
+    {
+        return 2 * ($this->width + $this->height);
+    }
 }
