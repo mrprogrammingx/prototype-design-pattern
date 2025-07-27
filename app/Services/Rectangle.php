@@ -44,4 +44,9 @@ class Rectangle extends Shape
     {
         return 2 * ($this->width + $this->height);
     }
+
+    public function getType(): string
+    {
+        return 'Rectangle';
+    }
 }
