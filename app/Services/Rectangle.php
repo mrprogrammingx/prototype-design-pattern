@@ -60,4 +60,17 @@ class Rectangle extends Shape
             $this->y
         );
     }
+
+    public function __debugInfo(): array
+    {
+        return [
+            'type' => $this->getType(),
+            'width' => $this->width,
+            'height' => $this->height,
+            'x' => $this->x,
+            'y' => $this->y,
+            'area' => $this->getArea(),
+            'perimeter' => $this->getPerimeter(),
+        ];
+    }
 }
