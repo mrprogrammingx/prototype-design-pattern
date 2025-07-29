@@ -83,4 +83,12 @@ class Rectangle extends Shape
             [0, 0, 1]
         ];
     }
+
+    public function getTransformationMatrixForRectangleTypeShape(Shape $shape): array
+    {
+        if ($shape instanceof Rectangle) {
+            return $this->getTransformationMatrix();
+        }
+        return [];
+    }
 }
