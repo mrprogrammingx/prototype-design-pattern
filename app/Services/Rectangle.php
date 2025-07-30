@@ -73,4 +73,14 @@ class Rectangle extends Shape
             'perimeter' => $this->getPerimeter(),
         ];
     }
+
+    public function getTransformationMatrix(): array
+    {
+        // Example transformation matrix for a rectangle
+        return [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ];
+    }
 }

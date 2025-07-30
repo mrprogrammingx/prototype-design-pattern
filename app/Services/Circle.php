@@ -326,5 +326,4 @@ class Circle extends Shape
         }
         return [];
     }
-    
 }
