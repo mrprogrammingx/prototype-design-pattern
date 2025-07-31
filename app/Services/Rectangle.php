@@ -91,4 +91,9 @@ class Rectangle extends Shape
         }
         return [];
     }
+
+    public function getColor(): string
+    {
+        return 'blue'; // Default color for rectangle
+    }
 }
