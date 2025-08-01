@@ -96,4 +96,11 @@ class Rectangle extends Shape
     {
         return 'blue'; // Default color for rectangle
     }
+
+    public function setColor(string $color): void
+    {
+        // Set color logic for rectangle
+        // This is just a placeholder, as Rectangle does not have a color property
+        $this->color = $color;
+    }
 }
