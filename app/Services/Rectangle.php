@@ -103,4 +103,9 @@ class Rectangle extends Shape
         // This is just a placeholder, as Rectangle does not have a color property
         $this->color = $color;
     }
+
+    public function getX(): int
+    {
+        return $this->x;
+    }
 }
