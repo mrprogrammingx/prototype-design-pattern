@@ -108,4 +108,9 @@ class Rectangle extends Shape
     {
         return $this->x;
     }
+
+    public function getY(): int
+    {
+        return $this->y;
+    }
 }
