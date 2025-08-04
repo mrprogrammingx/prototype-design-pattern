@@ -113,4 +113,9 @@ class Rectangle extends Shape
     {
         return $this->y;
     }
+
+    public function setX(int $x): void
+    {
+        $this->x = $x;
+    }
 }
