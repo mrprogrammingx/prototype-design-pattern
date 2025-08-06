@@ -123,4 +123,14 @@ class Rectangle extends Shape
     {
         $this->y = $y;
     }
+
+    public function getBoundingBox(): array
+    {
+        return [
+            'x' => $this->x,
+            'y' => $this->y,
+            'width' => $this->width,
+            'height' => $this->height
+        ];
+    }
 }
