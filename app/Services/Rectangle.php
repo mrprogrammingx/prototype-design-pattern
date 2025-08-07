@@ -133,4 +133,10 @@ class Rectangle extends Shape
             'height' => $this->height
         ];
     }
+
+    public function isPointInside(int $x, int $y): bool
+    {
+        return $x >= $this->x && $x <= ($this->x + $this->width) &&
+               $y >= $this->y && $y <= ($this->y + $this->height);
+    }
 }
