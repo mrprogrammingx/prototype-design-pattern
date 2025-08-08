@@ -139,4 +139,12 @@ class Rectangle extends Shape
         return $x >= $this->x && $x <= ($this->x + $this->width) &&
                $y >= $this->y && $y <= ($this->y + $this->height);
     }
+
+    public function getCenter(): array
+    {
+        return [
+            'x' => $this->x + ($this->width / 2),
+            'y' => $this->y + ($this->height / 2)
+        ];
+    }
 }
