@@ -147,4 +147,14 @@ class Rectangle extends Shape
             'y' => $this->y + ($this->height / 2)
         ];
     }
+
+    public function getCorners(): array
+    {
+        return [
+            ['x' => $this->x, 'y' => $this->y],
+            ['x' => $this->x + $this->width, 'y' => $this->y],
+            ['x' => $this->x + $this->width, 'y' => $this->y + $this->height],
+            ['x' => $this->x, 'y' => $this->y + $this->height]
+        ];
+    }
 }
