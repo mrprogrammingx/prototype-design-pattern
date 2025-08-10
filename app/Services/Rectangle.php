@@ -157,4 +157,9 @@ class Rectangle extends Shape
             ['x' => $this->x, 'y' => $this->y + $this->height]
         ];
     }
+
+    public function getDiagonalLength(): float
+    {
+        return sqrt(pow($this->width, 2) + pow($this->height, 2));
+    }
 }
