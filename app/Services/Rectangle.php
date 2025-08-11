@@ -162,4 +162,9 @@ class Rectangle extends Shape
     {
         return sqrt(pow($this->width, 2) + pow($this->height, 2));
     }
+
+    public function getAspectRatio(): float
+    {
+        return $this->width / $this->height;
+    }
 }
