@@ -172,4 +172,13 @@ class Rectangle extends Shape
     {
         return $this->getDiagonalLength() / 2;
     }
+
+    public function getDiagonal(): array
+    {
+        return [
+            'start' => ['x' => $this->x, 'y' => $this->y],
+            'end' => ['x' => $this->x + $this->width, 'y' => $this->y + $this->height]
+        ];
+    }
+
 }
