@@ -181,4 +181,8 @@ class Rectangle extends Shape
         ];
     }
 
+    public function getBoundingBoxArea(): float
+    {
+        return $this->width * $this->height;
+    }
 }
