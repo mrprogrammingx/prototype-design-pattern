@@ -192,4 +192,9 @@ class Rectangle extends Shape
         return pi() * pow($radius, 2);
     }
 
+    public function getBoundingBoxPerimeter(): float
+    {
+        return 2 * ($this->width + $this->height);
+    }
+
 }
