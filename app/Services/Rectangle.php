@@ -202,4 +202,12 @@ class Rectangle extends Shape
         $radius = $this->getBoundingCircleRadius();
         return 2 * pi() * $radius;
     }
+
+    public function getBoundingBoxCenter(): array
+    {
+        return [
+            'x' => $this->x + ($this->width / 2),
+            'y' => $this->y + ($this->height / 2)
+        ];
+    }
 }
