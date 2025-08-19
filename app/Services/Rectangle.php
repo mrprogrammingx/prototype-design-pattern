@@ -214,4 +214,9 @@ class Rectangle extends Shape
     {
         return $this->getBoundingBoxCenter();
     }
+
+    public function getBoundingBoxCorners(): array
+    {
+        return $this->getCorners();
+    }
 }
