@@ -210,4 +210,8 @@ class Rectangle extends Shape
             'y' => $this->y + ($this->height / 2)
         ];
     }
+    public function getBoundingCircleCenter(): array
+    {
+        return $this->getBoundingBoxCenter();
+    }
 }
