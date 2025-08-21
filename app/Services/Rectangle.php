@@ -219,4 +219,19 @@ class Rectangle extends Shape
     {
         return $this->getCorners();
     }
+
+    public function getBoundingCircleCircumferencePoints(int $numPoints = 36): array
+    {
+        $points = [];
+        $center = $this->getBoundingCircleCenter();
+        $radius = $this->getBoundingCircleRadius();
+        for ($i = 0; $i < $numPoints; $i++) {
+            $angle = (2 * pi() / $numPoints) * $i;
+            $points[] = [
+                'x' => $center['x'] + $radius * cos($angle),
+                'y' => $center['y'] + $radius * sin($angle)
+            ];
+        }
+        return $points;
+    }
 }
