@@ -234,4 +234,9 @@ class Rectangle extends Shape
         }
         return $points;
     }
+
+    public function getBoundingBoxDiagonal(): array
+    {
+        return $this->getDiagonal();
+    }
 }
