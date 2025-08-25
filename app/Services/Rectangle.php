@@ -249,4 +249,9 @@ class Rectangle extends Shape
     {
         return $this->getBoundingCirclePerimeter();
     }
+
+    public function getBoundingCircleCircumferenceArea(): float
+    {
+        return $this->getBoundingCircleArea();
+    }
 }
